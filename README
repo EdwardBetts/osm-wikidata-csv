@@ -1,0 +1,28 @@
+Tool for adding wikidata tags to OpenStreetMap
+
+This tool expects a CSV file with three fields wikidata, OSM type and OSM ID.
+It'll open a changeset, add the wikidata tag to each object, then close the
+changeset.
+
+To use the tool you first need to set your username and password in the config
+file. You can also set the comment that is posted on the changeset in the
+config file.
+
+Run the upload tool from the command line with the name as the CSV as the first
+argument.
+
+Example:
+
+$ ./upload.py divisions_of_kannur.csv
+
+
+Written by Edward Betts <edward@4angle.com>
+
+This file is made available under the Creative Commons CC0 1.0 Universal Public
+Domain Dedication.
+
+The person who associated a work with this deed has dedicated the work to the
+public domain by waiving all of his or her rights to the work worldwide under
+copyright law, including all related and neighboring rights, to the extent
+allowed by law. You can copy, modify, distribute and perform the work, even for
+commercial purposes, all without asking permission. 
