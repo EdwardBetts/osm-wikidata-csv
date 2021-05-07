@@ -49,7 +49,7 @@ def create_changeset(changeset):
 
 
 def close_changeset(changeset_id):
-    return osm_put(f"/changeset/{changeset_id}/close", data='')
+    return osm_put(f"/changeset/{changeset_id}/close", data="")
 
 
 def save_element(osm_type, osm_id, element_data):
