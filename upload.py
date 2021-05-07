@@ -49,7 +49,7 @@ def create_changeset(changeset):
 
 
 def close_changeset(changeset_id):
-    return osm_put(f"/changeset/{changeset_id}/close")
+    return osm_put(f"/changeset/{changeset_id}/close", data='')
 
 
 def save_element(osm_type, osm_id, element_data):
@@ -66,7 +66,7 @@ def skip_existing(root, osm_type, osm_id, qid):
     existing_wikidata_tag = root.find('.//tag[@k="wikidata"]')
     if existing_wikidata_tag is None:
         return False
-    existing_wikidata = existing_wikidata_tag.text
+    existing_wikidata = existing_wikidata_tag.get("v")
     if existing_wikidata == qid:
         print(f"skipping {osm_type}/{osm_id}, it is already tagged")
         return True

@@ -1,4 +1,4 @@
 [osm]
-username = 'USERNAME HERE'
-password = 'PASSWORD HERE'
-changeset_comment = "Add wikidata tags"
+username=USERNAME HERE
+password=PASSWORD HERE
+changeset_comment=Add wikidata tags
